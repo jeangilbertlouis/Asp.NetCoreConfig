@@ -11,8 +11,7 @@ namespace WebApi
         {
             Configuration = configuration;
 
-            //Add the appsettings to Global configuration
-            //This is only needed if we use IConfiguration as settings provider
+            //This is only needed if we want to bind to another json file. Included to be explicity
             var configBuilder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
             Configuration = configBuilder.Build();
             
